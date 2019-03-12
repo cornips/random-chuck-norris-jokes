@@ -9,7 +9,8 @@ import jslint from 'gulp-jslint';
 import minify from 'gulp-minify';
 import watch from 'gulp-watch';
 import htmlmin from 'gulp-htmlmin';
-import browserSync from 'browser-sync'
+import browserSync from 'browser-sync';
+import webpack from 'webpack-stream';
 
 const dirs = {
   src: 'source',
@@ -59,9 +60,10 @@ gulp.task('scripts', gulp.series('clean-scripts', () => {
     .pipe(jslint())
     .pipe(minify({
         ext:{
-            min:'.js'
+            min:'.min.js'
         }
     }))
+    .pipe(webpack( require('./webpack.config.js') ))
     .pipe(gulp.dest(jsPaths.dest))
     .pipe(browserSync.reload({
         stream: true
