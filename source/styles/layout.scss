@@ -1,0 +1,55 @@
+// ###### TABLE OF CONTENTS ######
+//
+// # Headings
+// # General text
+// # General layout
+// # Forms
+//
+// ###############################
+@import 'reset';
+@import 'variables';
+
+
+// # Headings
+h1,h2,h3,h4,h5,h6 {
+    font-family: $general-font-family;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 26.4px;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 15.4px;
+}
+
+
+
+// # General text
+body {
+    font-family: $general-font-family;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+
+// # General layout
+header,
+aside,
+section {
+    width: 100%;
+    display: flex;
+}
+
+
+
+// # Forms
+label {
+    cursor: pointer;
+}
