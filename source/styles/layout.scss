@@ -1,13 +1,46 @@
 // ###### TABLE OF CONTENTS ######
 //
+// # Layout
 // # Headings
-// # General text
-// # General layout
+// # Text
 // # Forms
 //
 // ###############################
 @import 'reset';
 @import 'variables';
+@import 'mixins';
+@import 'jokeslist';
+@import 'favourites';
+
+
+// # Layout
+@viewport {
+  width: device-width;
+}
+header,
+aside,
+section {
+    width: 100%;
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1.25em;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+    flex-wrap: wrap;
+}
+
+@include tablet {
+    body > section  { flex: 2 0px; }
+    aside  { order: 1; }
+    body > section  { order: 2; }
+}
+
 
 
 // # Headings
@@ -16,21 +49,26 @@ h1,h2,h3,h4,h5,h6 {
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 24px;
-    line-height: 26.4px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    @include tablet {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
 }
 
-h3 {
-    font-size: 14px;
-    line-height: 15.4px;
+h2 {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
 }
 
 
 
-// # General text
+// # Text
 body {
     font-family: $general-font-family;
     font-size: 14px;
@@ -39,17 +77,8 @@ body {
 
 
 
-// # General layout
-header,
-aside,
-section {
-    width: 100%;
-    display: flex;
-}
-
-
-
 // # Forms
-label {
+label,
+button {
     cursor: pointer;
 }

@@ -1,0 +1,17 @@
+@import 'toggle';
+
+.timer-toggle {
+    display: inline;
+    float: right;
+}
+
+#timer {
+    width: 100%;
+    margin-bottom: 4px;
+
+    progress {
+        display: none;
+        width: calc(100% - 110px);
+        margin-top: .6em;
+    }
+}

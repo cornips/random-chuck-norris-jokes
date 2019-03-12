@@ -2,57 +2,116 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Random Chuck Norris jokes</title>
 <link rel="stylesheet" href="./styles/layout.css" />
 </head>
 <body>
+<div class="wrapper">
 
 <header id="pageTitle">
     <h1>Random Chuck Norris jokes</h1>
 </header>
 
-<aside>
-    <h2>Favourites</h2>
-    <ul id="favList">
-        <li id="fav-1" class="fav-item" data-fav="1">
-            Joke text
-            <br>
-            <button class="del-fav">remove from list</button>
-        </li><!-- /.fav-item -->
-        <li id="fav-2" class="fav-item" data-fav="2">
-            Joke text
-            <br>
-            <button class="del-fav">remove from list</button>
-        </li><!-- /.fav-item -->
-        <li id="fav-3" class="fav-item" data-fav="3">
-            Joke text
-            <br>
-            <button class="del-fav">remove from list</button>
-        </li><!-- /.fav-item -->
-    </ul><!-- /#favourites -->
-</aside>
-
 <section id="jokesList">
     <header id="jokesHeader" class="actions">
         <div id="timer">
-            <progress max="1" value=".0"></progress>
+            <progress max="1" value=".40"></progress>
             <div class="timer-toggle">
-                <label><input type="radio" name="timer" value="0" id="timerOff" />Timer off</label>
-                <label><input type="radio" name="timer" value="1" id="timerOn" />Timer on</label>
+                <label for="timerSetting" class="toggle-string x2"><input type="checkbox" name="timer" value="1" id="timerSetting" class="toggle-status" />
+                <span for="timerSetting" class="toggle-switch x2"></span>
+                Timer</label>
             </div><!-- /.timer-toggle -->
         </div><!-- /#timer -->
     </header><!-- /.actions -->
 
     <article class="joke" id="joke-1">
-        The blue hen
+        The blue hen went over the burried body and fell a whole lot worse than the rabbit when he pulled out his gun to get rid of the annoying pig
+        <footer>
+            <button class="add-fav added" aria-label="Add item to favourites"></button>
+        </footer>
     </article><!-- /.joke -->
     <article class="joke" id="joke-2">
         Went over the burried body
+        <footer>
+            <button class="add-fav" aria-label="Add item to favourites"></button>
+        </footer>
     </article><!-- /.joke -->
     <article class="joke" id="joke-3">
         And fell
+        <footer>
+            <button class="add-fav" aria-label="Add item to favourites"></button>
+        </footer>
     </article><!-- /.joke -->
-</section><!-- /#jokesList -->
+</section><!-- /#main -->
+
+<aside id="favourites">
+    <h2>Favourites</h2>
+    <section id="favList">
+        <article id="fav-1" class="fav-item" data-fav="1">
+            <p>The blue hen went over the burried body and fell a whole lot worse than the rabbit when he pulled out his gun to get rid of the annoying pig</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-2" class="fav-item" data-fav="2">
+            <p>Went over the burried body</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>And fell</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+        <article id="fav-3" class="fav-item" data-fav="3">
+            <p>Joke text</p>
+            <footer>
+                <button class="del-fav" aria-label="Remove item from list">X</button>
+            </footer>
+        </article><!-- /.fav-item -->
+    </section><!-- /#favourites -->
+</aside>
+
+</div><!-- /.wrapper -->
 
 <script src="./scripts/bundle.js"></script>
 </body>

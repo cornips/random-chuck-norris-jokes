@@ -2,16 +2,18 @@
 //
 // # Fonts
 // # Colors
+// # Media queries
 //
 // ###############################
-
 
 
 // # Fonts
 $general-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-
-
 // # Colors
 $primary-color: #3d8d7f;
 $secondary-color: #92a69e;
+
+// # Media queries
+$tablet-width: 768px;
+$desktop-width: 1024px;
