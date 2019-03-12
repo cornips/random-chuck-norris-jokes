@@ -3,6 +3,9 @@
 .timer-toggle {
     display: inline;
     float: right;
+    @include tablet {
+        float: left;
+    }
 }
 
 #timer {
