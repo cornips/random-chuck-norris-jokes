@@ -28,6 +28,9 @@ section {
     display: flex;
     flex-flow: row wrap;
     margin: 1.25em;
+    @include desktop {
+        margin: 2.5em;
+    }
 }
 
 .wrapper > * {
